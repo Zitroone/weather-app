@@ -173,12 +173,7 @@ small {
 }
 
 .footer {
-margin-left: 10px;
-}
-
-.wrapper {
-  height: 560px;
-  display: block;
-  margin: 0 auto;
-  max-width: 1100px;
+  position: relative;
+  top: 80px;
+  left: 15px;
 }
