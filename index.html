@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container border">
+      <div class="row">
+        <div class="col-5">
+          <!-- Left column -->
+          <form id="search-form">
+            <input
+              type="text"
+              name="searchbar"
+              placeholder="City"
+              autofocus
+              class="search-bar"
+              id="search-input-city"
+              required
+            />
+            <!-- <input
+              type="text"
+              name="searchbar"
+              placeholder="Country"
+              autofocus
+              class="search-bar"
+              id="search-input-country"
+              required
+            /> -->
+            <input
+              type="submit"
+              value="Search"
+              class="search-button btn btn-outline-secondary"
+              id="search-button"
+            />
+            <img src="media/Compass.svg" alt="compass" id="current" />
+          </form>
+
+          <div class="city-info">
+            <h3 id="date">June 27, 2021</h3>
+            <h1 id="city-name">Fulda, DE</h1>
+            <h2 id="day-and-time">Sunday 05:30PM</h2>
+
+            <p class="humidity-wind">
+              Humidity: <span id="humidity">44</span>% <br />
+              Wind: <span id="wind">13</span> km/h
+            </p>
+          </div>
+        </div>
+
+        <div class="col-7">
+          <!--Right column -->
+          <div class="row">
+            <div class="col-5 temperature-today">
+              <div class="celsius-today">
+                <span id="celsius-today">27</span
+                ><a href="#" id="celsius-link">°C</a>
+              </div>
+
+              <div class="farenheit-today">
+                <span id="fahrenheit-today">80</span
+                ><a href="#" id="fahrenheit-link">°F</a>
+              </div>
+
+              <div class="weather-description-today">Cloudy</div>
+            </div>
+            <div class="col-7">
+              <img src="media/10d.svg" alt="cloud" id="weather-icon" />
+            </div>
+          </div>
+          <div class="row weather-forecast">
+            <!--Weather forecast -->
+            <div class="col-2 weather-forecast-date">
+              Mon
+              <img
+                src="media/rain-cloud.svg"
+                alt="rain"
+                class="small-weather-icon"
+              />
+              <span class="forecast-temp">21</span>
+              <a href="#" class="celsius-link">°C </a>|<a
+                href="#"
+                class="fahrenheit-link"
+              >
+                °F</a
+              >
+              <br />
+              <small>Rainy</small>
+            </div>
+            <div class="col-2 weather-forecast-date">
+              Tue
+              <img
+                src="media/sun-cloud.svg"
+                alt="sun-cloud"
+                class="small-weather-icon"
+              />
+              <span class="forecast-temp">25</span>
+              <a href="#" class="celsius-link">°C </a>|<a
+                href="#"
+                class="fahrenheit-link"
+              >
+                °F</a
+              ><br />
+              <small>Cloudy</small>
+            </div>
+            <div class="col-2 weather-forecast-date">
+              Wed<img
+                src="media/lightning-cloud.svg"
+                alt="lightning"
+                class="small-weather-icon"
+              />
+              <span class="forecast-temp">30</span>
+              <a href="#" class="celsius-link">°C </a>|<a
+                href="#"
+                class="fahrenheit-link"
+              >
+                °F</a
+              ><br />
+              <small>Stormy</small>
+            </div>
+            <div class="col-2 weather-forecast-date">
+              Thu<img
+                src="media/rain-cloud.svg"
+                alt="rain"
+                class="small-weather-icon"
+              />
+              <span class="forecast-temp">14</span>
+              <a href="#" class="celsius-link">°C </a>|<a
+                href="#"
+                class="fahrenheit-link"
+              >
+                °F</a
+              ><br />
+              <small>Rainy</small>
+            </div>
+            <div class="col-2 weather-forecast-date">
+              Fri<img
+                src="media/rain-cloud.svg"
+                alt="rain"
+                class="small-weather-icon"
+              />
+              <span class="forecast-temp">22</span>
+              <a href="#" class="celsius-link">°C </a>|<a
+                href="#"
+                class="fahrenheit-link"
+              >
+                °F</a
+              ><br />
+              <small>Rainy</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
